@@ -18,8 +18,7 @@ sites:
     url: https://health-analytics.ysens.it/health/rules
 
 status-website:
-  # Fino al record DNS di status.ysens.it la pagina sta su GitHub Pages.
-  baseUrl: /ysens-status
+  cname: status.ysens.it
   name: Stato del servizio YSENS
   introTitle: "**Stato del servizio YSENS**"
   introMessage: "Qui pubblichiamo lo stato dei servizi della piattaforma YSENS, le manutenzioni programmate e gli incidenti, con i loro aggiornamenti. I controlli sono automatici ogni 5 minuti. Per assistenza scrivi a [supporto@ydigital.it](mailto:supporto@ydigital.it)."

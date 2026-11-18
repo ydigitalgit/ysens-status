@@ -1,6 +1,6 @@
 # Stato del servizio YSENS
 
-Pagina pubblica dello stato della piattaforma YSENS di Y Digital: <https://ydigitalgit.github.io/ysens-status/>
+Pagina pubblica dello stato della piattaforma YSENS di Y Digital: <https://status.ysens.it>
 (diventerà `status.ysens.it`).
 
 Costruita con [Upptime](https://upptime.js.org): GitHub Actions controlla ogni 5 minuti gli endpoint
