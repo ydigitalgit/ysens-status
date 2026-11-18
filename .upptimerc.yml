@@ -1,31 +1,81 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Pagina di stato del servizio YSENS (Y Digital). Controlli ogni 5 minuti da
+# GitHub Actions sugli endpoint pubblici di salute di PRODUZIONE: rispondono 503
+# quando il servizio è giù. Solo servizi che il cliente percepisce, con nomi
+# per il cliente; il monitoraggio interno completo resta su UptimeRobot.
+owner: ydigital-flavia
+repo: ysens-status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Portale YSENS
+    url: https://health-app.ysens.it/health/ysens
+  - name: Ricezione dei dati dai dispositivi
+    url: https://health-ingest.ysens.it/health/emqx
+  - name: Salvataggio delle misure
+    url: https://health-ingest.ysens.it/health/influx_data
+  - name: Archivio delle misure
+    url: https://health-analytics.ysens.it/health/influxdb
+  - name: Regole e avvisi
+    url: https://health-analytics.ysens.it/health/rules
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  # Fino al record DNS di status.ysens.it la pagina sta su GitHub Pages.
+  baseUrl: /ysens-status
+  name: Stato del servizio YSENS
+  introTitle: "**Stato del servizio YSENS**"
+  introMessage: "Qui pubblichiamo lo stato dei servizi della piattaforma YSENS, le manutenzioni programmate e gli incidenti, con i loro aggiornamenti. I controlli sono automatici ogni 5 minuti. Per assistenza scrivi a [supporto@ydigital.it](mailto:supporto@ydigital.it)."
+  theme: light
   navbar:
-    - title: Status
+    - title: Stato
       href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
-
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+    - title: Y Digital
+      href: https://www.ydigital.it
+  i18n:
+    activeIncidents: Incidenti in corso
+    allSystemsOperational: Tutti i servizi sono operativi
+    incidentReport: "Rapporto dell'incidente n. $NUMBER →"
+    activeIncidentSummary: Aperto il $DATE, $POSTS aggiornamenti
+    incidentTitle: Incidente n. $NUMBER
+    incidentDetails: Dettagli dell'incidente
+    incidentFixed: Risolto
+    incidentOngoing: In corso
+    incidentOpenedAt: Aperto il
+    incidentClosedAt: Chiuso il
+    incidentViewOnGitHub: Vedi su GitHub
+    incidentCommentSummary: Pubblicato il $DATE
+    incidentBack: ← Torna a tutti gli incidenti
+    pastIncidents: Incidenti passati
+    pastIncidentsResolved: Risolto in $MINUTES minuti, $POSTS aggiornamenti
+    liveStatus: Stato attuale
+    overallUptime: "Disponibilità: $UPTIME"
+    overallUptimeTitle: Disponibilità
+    averageResponseTime: "Tempo di risposta medio: $TIME ms"
+    averageResponseTimeTitle: Tempo di risposta medio
+    sevelDayResponseTime: Tempo di risposta a 7 giorni
+    responseTimeMs: Tempo di risposta (ms)
+    up: Operativo
+    down: Non disponibile
+    degraded: Rallentato
+    ms: ms
+    loading: Caricamento
+    navGitHub: GitHub
+    footer: "Pagina di stato di [Y Digital](https://www.ydigital.it), realizzata con [Upptime](https://upptime.js.org)."
+    errorTitle: Si è verificato un errore
+    errorIntro: Non è stato possibile leggere lo stato aggiornato.
+    errorText: Riprova fra qualche istante.
+    errorHome: Torna alla pagina principale
+    pastScheduledMaintenance: Manutenzioni passate
+    scheduledMaintenance: Manutenzioni programmate
+    scheduledMaintenanceSummaryStarted: Iniziata il $DATE, durata $DURATION minuti
+    scheduledMaintenanceSummaryStarts: Inizia il $DATE, durata $DURATION minuti
+    startedAt: Iniziata il
+    startsAt: Inizia il
+    duration: Durata
+    durationMin: $DURATION minuti
+    incidentCompleted: Completata
+    incidentScheduled: Programmata
+    duration24H: 24 ore
+    duration7D: 7 giorni
+    duration30D: 30 giorni
+    duration1Y: 1 anno
+    durationAll: tutto
+    locale: it-IT
