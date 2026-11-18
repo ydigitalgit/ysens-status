@@ -2,7 +2,7 @@
 # GitHub Actions sugli endpoint pubblici di salute di PRODUZIONE: rispondono 503
 # quando il servizio è giù. Solo servizi che il cliente percepisce, con nomi
 # per il cliente; il monitoraggio interno completo resta su UptimeRobot.
-owner: ydigital-flavia
+owner: ydigitalgit
 repo: ysens-status
 
 sites:
