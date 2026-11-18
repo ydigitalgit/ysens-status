@@ -1,7 +1,6 @@
 # Stato del servizio YSENS
 
 Pagina pubblica dello stato della piattaforma YSENS di Y Digital: <https://status.ysens.it>
-(diventerà `status.ysens.it`).
 
 Costruita con [Upptime](https://upptime.js.org): GitHub Actions controlla ogni 5 minuti gli endpoint
 pubblici di salute di PRODUZIONE (rispondono 503 quando un servizio è giù) e GitHub Pages pubblica la
