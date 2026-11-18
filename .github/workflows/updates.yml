@@ -51,3 +51,5 @@ jobs:
         uses: upptime/updates@master
         env:
           GH_PAT: ${{ steps.app_token.outputs.token || secrets.GH_PAT || github.token }}
+
+# ysens-status: workflow registrato con una push (2026-11-18)
