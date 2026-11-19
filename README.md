@@ -6,13 +6,13 @@ Costruita con [Upptime](https://upptime.js.org): GitHub Actions controlla ogni 5
 pubblici di salute di PRODUZIONE (rispondono 503 quando un servizio è giù) e GitHub Pages pubblica la
 pagina, fuori dai server di Y Digital. Il monitoraggio interno completo resta su UptimeRobot.
 
-| Servizio sulla pagina | Endpoint |
-|---|---|
-| Portale YSENS | `health-app.ysens.it/health/ysens` |
-| Ricezione dei dati dai dispositivi | `health-ingest.ysens.it/health/emqx` |
-| Salvataggio delle misure | `health-ingest.ysens.it/health/influx_data` |
-| Archivio delle misure | `health-analytics.ysens.it/health/influxdb` |
-| Regole e avvisi | `health-analytics.ysens.it/health/rules` |
+| Servizio sulla pagina              | Endpoint                                    |
+| ---------------------------------- | ------------------------------------------- |
+| Portale YSENS                      | `health-app.ysens.it/health/ysens`          |
+| Ricezione dei dati dai dispositivi | `health-ingest.ysens.it/health/emqx`        |
+| Salvataggio delle misure           | `health-ingest.ysens.it/health/influx_data` |
+| Archivio delle misure              | `health-analytics.ysens.it/health/influxdb` |
+| Regole e avvisi                    | `health-analytics.ysens.it/health/rules`    |
 
 ## Come si usa
 
